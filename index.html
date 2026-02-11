@@ -1,218 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prof. Mabel Omowumi Ipinmoroti | Academic Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prof. Mabel Omowumi Ipinmoroti | Academic Portfolio</title>
 
-  <style>
-    :root {
-      --primary: #243447;
-      --accent: #1e9b5a;
-      --light: #f4f6f8;
-      --dark: #1c1c1c;
-      --white: #ffffff;
-      --muted: #666;
-    }
+<style>
+:root {
+  --primary: #1f2d3d;
+  --accent: #1e9b5a;
+  --bg: #f3f5f7;
+  --white: #ffffff;
+  --muted: #555;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: "Segoe UI", system-ui, sans-serif;
-      background: var(--light);
-      color: var(--dark);
-      line-height: 1.65;
-    }
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: #111;
+  line-height: 1.7;
+}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+a { text-decoration: none; color: inherit; }
 
-    /* ================= HEADER ================= */
-    header {
-      background: var(--white);
-      border-bottom: 1px solid #e5e5e5;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+header {
+  background: var(--white);
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
 
-    nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 1.2rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+nav {
+  max-width: 1300px;
+  margin: auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    .logo {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--primary);
-    }
+.logo {
+  font-weight: 700;
+  color: var(--primary);
+}
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      font-weight: 500;
-    }
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.95rem;
+}
 
-    .nav-links a:hover {
-      color: var(--accent);
-    }
+.nav-links a:hover {
+  color: var(--accent);
+}
 
-    /* ================= HERO ================= */
-    .hero {
-      background: linear-gradient(
-          rgba(36, 52, 71, 0.92),
-          rgba(36, 52, 71, 0.92)
-        );
-      color: var(--white);
-      padding: 6rem 2rem 4rem;
-      text-align: center;
-    }
+/* ================= HERO ================= */
+.hero {
+  background: linear-gradient(rgba(31,45,61,0.95), rgba(31,45,61,0.95));
+  color: var(--white);
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+}
 
-    .hero-content {
-      max-width: 900px;
-      margin: auto;
-    }
+.hero h1 {
+  font-size: 2.7rem;
+  margin-bottom: 0.6rem;
+}
 
-    .hero h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
+.hero p {
+  font-size: 1.15rem;
+  opacity: 0.95;
+}
 
-    .hero p {
-      font-size: 1.15rem;
-      opacity: 0.95;
-      margin-bottom: 2.5rem;
-    }
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-    .hero img {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid var(--white);
-      margin-top: 2rem;
-    }
+.btn {
+  padding: 0.75rem 2rem;
+  border-radius: 40px;
+  font-weight: 600;
+}
 
-    .hero-actions {
-      margin-top: 2.5rem;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+}
 
-    .btn {
-      padding: 0.8rem 2rem;
-      border-radius: 50px;
-      font-weight: 600;
-      display: inline-block;
-    }
+.btn-outline {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
 
-    .btn-primary {
-      background: var(--accent);
-      color: var(--white);
-    }
+.hero img {
+  margin-top: 3rem;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--white);
+}
 
-    .btn-outline {
-      border: 2px solid var(--white);
-      color: var(--white);
-    }
+/* ================= GENERAL SECTIONS ================= */
+section {
+  max-width: 1300px;
+  margin: auto;
+  padding: 5rem 2rem;
+}
 
-    /* ================= SECTIONS ================= */
-    section {
-      max-width: 1200px;
-      margin: auto;
-      padding: 5rem 2rem;
-    }
+.section-title {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  text-align: center;
+}
 
-    .section-title {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 3rem;
-      color: var(--primary);
-    }
+/* ================= SNAPSHOT ================= */
+.snapshot {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
 
-    /* ================= BIOGRAPHY ================= */
-    .bio {
-      max-width: 900px;
-      margin: auto;
-      font-size: 1.05rem;
-    }
+.snapshot div {
+  background: var(--white);
+  padding: 2rem;
+  border-left: 6px solid var(--accent);
+}
 
-    /* ================= CV BLOCKS ================= */
-    .cv-section {
-      margin-bottom: 3.5rem;
-    }
+/* ================= CV BLOCKS ================= */
+.cv-block {
+  background: var(--white);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  border-radius: 6px;
+}
 
-    .cv-section h3 {
-      font-size: 1.4rem;
-      color: var(--primary);
-      margin-bottom: 1.2rem;
-      border-left: 5px solid var(--accent);
-      padding-left: 1rem;
-    }
+.cv-block h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
 
-    .cv-section ul {
-      list-style: none;
-      padding-left: 1rem;
-    }
+.cv-block ul {
+  list-style: none;
+}
 
-    .cv-section li {
-      margin-bottom: 0.8rem;
-      color: var(--muted);
-    }
+.cv-block li {
+  margin-bottom: 0.9rem;
+  color: var(--muted);
+}
 
-    /* ================= PUBLICATIONS ================= */
-    .publication {
-      background: var(--white);
-      padding: 1.8rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    }
+/* ================= TIMELINE ================= */
+.timeline li {
+  display: grid;
+  grid-template-columns: 140px auto;
+  gap: 1.5rem;
+}
 
-    .publication strong {
-      color: var(--primary);
-    }
+/* ================= PUBLICATIONS ================= */
+.pub {
+  padding: 1.8rem;
+  background: var(--white);
+  margin-bottom: 1.2rem;
+  border-left: 5px solid var(--accent);
+}
 
-    /* ================= CONTACT ================= */
-    .contact {
-      background: var(--white);
-      padding: 3rem;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    }
+/* ================= FOOTER ================= */
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem;
+}
 
-    /* ================= FOOTER ================= */
-    footer {
-      background: var(--primary);
-      color: var(--white);
-      text-align: center;
-      padding: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+@media(max-width:768px) {
+  .nav-links { display: none; }
+  .hero h1 { font-size: 2rem; }
+}
+</style>
 </head>
 
 <body>
@@ -221,8 +198,9 @@
   <nav>
     <div class="logo">Prof. M. O. Ipinmoroti</div>
     <div class="nav-links">
-      <a href="#bio">Biography</a>
-      <a href="#academic">Academics</a>
+      <a href="#snapshot">Snapshot</a>
+      <a href="#appointments">Appointments</a>
+      <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#contact">Contact</a>
     </div>
@@ -230,73 +208,73 @@
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <h1>Prof. Mabel Omowumi Ipinmoroti</h1>
-    <p>
-      Professor of Fisheries & Aquaculture<br>
-      Osun State University, Nigeria<br>
-      Specialist in Sustainable Aquaculture, Environmental Toxicology & Organic Agriculture
-    </p>
+  <h1>Prof. Mabel Omowumi Ipinmoroti</h1>
+  <p>
+    Professor of Fisheries & Aquaculture<br>
+    Osun State University, Nigeria<br>
+    Environmental Toxicology • Sustainable Aquaculture • Organic Agriculture
+  </p>
 
-    <div class="hero-actions">
-      <a href="cv.pdf" class="btn btn-primary" download>Download Full CV (PDF)</a>
-      <a href="#contact" class="btn btn-outline">Contact</a>
-    </div>
+  <div class="hero-actions">
+    <a href="cv.pdf" class="btn btn-primary" download>Download Full CV (PDF)</a>
+    <a href="#contact" class="btn btn-outline">Contact</a>
+  </div>
 
-    <img src="profile-main.jpg" alt="Prof. Mabel Omowumi Ipinmoroti">
+  <img src="profile-main.jpg" alt="Prof. Ipinmoroti">
+</section>
+
+<section id="snapshot">
+  <h2 class="section-title">Academic Snapshot</h2>
+  <div class="snapshot">
+    <div><strong>Current Rank:</strong><br>Professor</div>
+    <div><strong>Department:</strong><br>Fisheries & Aquatic Resources Management</div>
+    <div><strong>Institution:</strong><br>Osun State University</div>
+    <div><strong>Years of Experience:</strong><br>25+ Years</div>
+    <div><strong>Research Areas:</strong><br>Aquaculture, Toxicology, Organic Agriculture</div>
+    <div><strong>Professional Status:</strong><br>FISON Fellow</div>
   </div>
 </section>
 
-<section id="bio">
-  <h2 class="section-title">Biography</h2>
-  <div class="bio">
-    <p>
-      Prof. Mabel Omowumi Ipinmoroti is a distinguished Nigerian academic with over two decades
-      of experience in fisheries, aquaculture, environmental management, and organic agriculture.
-      She holds a Ph.D. in Fisheries Management from the University of Ibadan and is currently a
-      Professor at Osun State University.
-    </p>
+<section id="appointments">
+  <h2 class="section-title">Academic Appointments & Promotions</h2>
+
+  <div class="cv-block">
+    <ul class="timeline">
+      <li><strong>2020–Present</strong><span>Professor, Osun State University</span></li>
+      <li><strong>2015–2020</strong><span>Associate Professor</span></li>
+      <li><strong>2010–2015</strong><span>Senior Lecturer</span></li>
+      <li><strong>2004–2010</strong><span>Lecturer I / II</span></li>
+    </ul>
   </div>
 </section>
 
-<section id="academic">
-  <h2 class="section-title">Academic Profile</h2>
+<section id="research">
+  <h2 class="section-title">Research, Grants & Supervision</h2>
 
-  <div class="cv-section">
-    <h3>Academic Appointments & Promotions</h3>
+  <div class="cv-block">
+    <h3>Research Focus</h3>
     <ul>
-      <li>Professor of Fisheries & Aquaculture — Osun State University</li>
-      <li>Senior Lecturer → Associate Professor → Professor</li>
+      <li>Sustainable aquaculture systems and alternative protein sources</li>
+      <li>Environmental toxicology of Nigerian aquatic ecosystems</li>
+      <li>Ecological Organic Agriculture (EOA)</li>
+      <li>Fish nutrition and feed formulation</li>
     </ul>
   </div>
 
-  <div class="cv-section">
-    <h3>Administrative & Leadership Roles</h3>
+  <div class="cv-block">
+    <h3>Grants & Funded Projects</h3>
     <ul>
-      <li>Team Leader, Ecological Organic Agriculture (EOA) Initiative, Nigeria</li>
-      <li>Departmental and Faculty-Level Committees</li>
+      <li>TETFund National Research Fund — Principal Investigator</li>
+      <li>EOA National Programme — Team Leader</li>
     </ul>
   </div>
 
-  <div class="cv-section">
-    <h3>Grants & Funded Research</h3>
-    <ul>
-      <li>TETFund National Research Fund — Insect-based protein in aquaculture</li>
-    </ul>
-  </div>
-
-  <div class="cv-section">
+  <div class="cv-block">
     <h3>Postgraduate Supervision</h3>
     <ul>
-      <li>Supervised multiple MSc and PhD candidates in Fisheries & Aquaculture</li>
-    </ul>
-  </div>
-
-  <div class="cv-section">
-    <h3>Professional Memberships</h3>
-    <ul>
-      <li>Fellow, Fisheries Society of Nigeria (FISON)</li>
-      <li>Member, Organization for Women Scientists in the Developing World</li>
+      <li>PhD Candidates Supervised</li>
+      <li>MSc Candidates Supervised</li>
+      <li>Ongoing postgraduate supervision</li>
     </ul>
   </div>
 </section>
@@ -304,22 +282,26 @@
 <section id="publications">
   <h2 class="section-title">Selected Publications</h2>
 
-  <div class="publication">
+  <div class="pub">
     <strong>Assessment and Implications of Microplastics on Selected Fish Species</strong><br>
     Journal of Global Affairs, 2024
   </div>
 
-  <div class="publication">
+  <div class="pub">
     <strong>Diversity, Distribution and Abundance of Fish Species in Lake Asejire</strong><br>
     The Zoologist, 2022
   </div>
 
+  <div class="pub">
+    <strong>Utilization of House Fly Maggots as Replacement for Fish Meal</strong><br>
+    Journal of Insects as Food & Feed, 2018
+  </div>
 </section>
 
 <section id="contact">
   <h2 class="section-title">Contact</h2>
-  <div class="contact">
-    <p><strong>Department of Fisheries and Aquatic Resources Management</strong></p>
+  <div class="cv-block" style="text-align:center">
+    <p><strong>Department of Fisheries & Aquatic Resources Management</strong></p>
     <p>Osun State University, Osogbo, Nigeria</p>
     <p>Email: mabel.ipinmoroti@uniosun.edu.ng</p>
     <p>Phone: +234 802 887 1853</p>
@@ -327,7 +309,7 @@
 </section>
 
 <footer>
-  &copy; 2026 Prof. Mabel Omowumi Ipinmoroti. All Rights Reserved.
+  © 2026 Prof. Mabel Omowumi Ipinmoroti. All Rights Reserved.
 </footer>
 
 </body>
